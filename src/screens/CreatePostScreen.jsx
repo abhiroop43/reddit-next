@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-const RoomsScreen = () => {
+const CreatePostScreen = () => {
   return (
     <View>
       <Text>Communities Screen</Text>
@@ -9,4 +9,4 @@ const RoomsScreen = () => {
   );
 };
 
-export default RoomsScreen;
+export default CreatePostScreen;

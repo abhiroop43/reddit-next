@@ -3,9 +3,9 @@ import { Pressable, StyleSheet, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { GlobalStyles } from '../../themes/styles';
 
-const CircularButton = ({ onPress, children }) => {
+const CircularButton = ({ onPress, children, gradient }) => {
   return (
-    <LinearGradient colors={[GlobalStyles.colors.primary500, GlobalStyles.colors.primary200]} style={styles.button}>
+    <LinearGradient colors={gradient} style={styles.button}>
       <Pressable onPress={onPress}>
         <Text style={styles.buttonText}>{children}</Text>
       </Pressable>

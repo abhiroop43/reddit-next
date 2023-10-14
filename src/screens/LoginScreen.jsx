@@ -1,13 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, TextInput, TouchableOpacity, ImageBackground, Text } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground,
+  Text,
+  Dimensions,
+  KeyboardAvoidingView,
+} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { GlobalStyles } from '../themes/styles';
 import CircularButton from '../components/shared/CircularButton';
 import MaterialTextInput from '../components/shared/MaterialTextInput';
 
+const windowHeight = Dimensions.get('window').height;
+
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior="position">
       {/* top banner */}
       <View>
         <ImageBackground
@@ -48,7 +58,7 @@ const LoginScreen = () => {
           </View>
         </View>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -56,10 +66,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // flexDirection: 'column',
+    // paddingTop: StatusBar.currentHeight,
   },
   topView: {
     width: '100%',
-    height: 400,
+    height: windowHeight * 0.4,
     position: 'absolute',
     top: 0,
   },
@@ -69,18 +80,19 @@ const styles = StyleSheet.create({
     // paddingVertical: 25,
     // height: 600,
     backgroundColor: GlobalStyles.colors.secondary,
+    // backgroundColor: 'blue',
     justifyContent: 'center',
     alignItems: 'center',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
     zIndex: 1,
     position: 'absolute',
-    top: 350,
+    top: windowHeight * 0.32,
   },
   title: {
     fontSize: 38,
     fontWeight: 'bold',
-    marginBottom: 60,
+    marginBottom: 40,
     marginTop: -50,
     alignSelf: 'flex-start',
     marginLeft: 20,
@@ -94,13 +106,6 @@ const styles = StyleSheet.create({
   },
   input: {
     marginTop: 25,
-    // width: '100%',
-    // height: 50,
-    // padding: 10,
-    // borderBottomWidth: 1,
-    // borderColor: GlobalStyles.colors.gray,
-    // borderRadius: 8,
-    // marginBottom: 15,
   },
   buttonsContainer: {
     flexDirection: 'row',

@@ -19,7 +19,7 @@ const MaterialTextInput = ({ label, secureTextEntry, customStyles, onChangeText 
           onChangeText(text);
         }}
         value={inputValue}
-        underlineColorAndroid={isFocused ? 'blue' : 'gray'}
+        // underlineColorAndroid={isFocused ? 'blue' : 'gray'}
       />
     </View>
   );

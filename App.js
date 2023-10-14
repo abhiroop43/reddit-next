@@ -5,7 +5,7 @@ import LoginScreen from './src/screens/LoginScreen';
 export default function App() {
   return (
     <>
-      <StatusBar style="inverted" />
+      <StatusBar style="dark" />
       <LoginScreen />
     </>
   );

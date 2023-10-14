@@ -12,7 +12,7 @@ const AuthForm = ({ isLogin, onSubmit }) => {
   const navigation = useNavigation();
 
   redirectNewUser = (isLogin) => {
-    console.log(isLogin);
+    // console.log(isLogin);
     if (isLogin) {
       navigation.navigate('SignUp');
     } else {
@@ -44,7 +44,7 @@ const AuthForm = ({ isLogin, onSubmit }) => {
 
           <View style={styles.buttonsContainer}>
             <View style={styles.signupContainer}>
-              <Text style={styles.question}>{isLogin ? 'New to Reddit?' : 'Already have an account?'}</Text>
+              <Text style={styles.question}>{isLogin ? 'New to Reddit?' : 'Already registered?'}</Text>
               <IconButton
                 textStyle={styles.signUpLink}
                 icon="md-chevron-forward"
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 38,
     fontWeight: 'bold',
     // marginBottom: 5,
-    // marginTop: 5,
+    marginTop: -25,
     alignSelf: 'flex-start',
     marginLeft: 20,
   },
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   input: {
-    marginTop: 25,
+    marginTop: 2,
   },
   buttonsContainer: {
     flexDirection: 'row',
